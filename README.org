@@ -1,0 +1,19 @@
+* Ada Byron 2016
+** Introducción
+
+AdaByron es un concurso universitario de programación para alumnos y
+alumnas matriculadas en las titulaciones de informática de las
+universidades públicas de la Comunidad de Madrid. No se establecen
+diferencias entre los distintos grados o itinerarios por lo que
+permite la participación de cualquier alumno o alumna que curse grados de
+informática, ya sean más orientados a desarrollo software o hardware.
+
+El concurso nació en 2015 con el objetivo de fomentar la participación
+de los alumnos y alumnas de la Comunidad de Madrid en los concursos
+universitarios internacionales como el SWERC pues la representación de
+las universidades madrileñas había ido bajando en picado.
+
+Los alumnos participan en equipos formados por tres
+estudiantes. Durante el concurso, los participantes disponen de 5
+horas para resolver los problemas propuestos (normalmente entre 8 y 12
+problemas). Deben programar sus soluciones en C, C++ o Java.
