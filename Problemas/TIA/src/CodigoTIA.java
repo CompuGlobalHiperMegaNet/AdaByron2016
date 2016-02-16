@@ -13,7 +13,9 @@ public class Tragraperras {
 		if (line%3 == 0) { //Estamos en índice
 		    index = Integer.parseInt(x);
 		}else{ //Estamos en entrada de datos
-		    
+		    String [] codes = x.split(" ");
+		    String word  = br.readLine();
+		    line+=1;
 		}
 		line += 1;
 	    }
