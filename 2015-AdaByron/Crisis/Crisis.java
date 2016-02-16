@@ -1,56 +1,53 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Crisis {
 
-    private static final String texto = "3\n1 3 6\n4\n1 3 2 5\n3\n6 6 6\n0";
-    
-    private static String input;
-    
     public static void main(String[] args) {
-
-	input = input();
-	System.out.println(input);
-	System.out.println(count_index(input));
-	
-    }
-    
-    private int[][] parser(String text) {
-	int position = 0;
-	return new int [1][1];
-    }
-    
-    private static int count_index (String text) {
-	int index = 0;
-	if (text.charAt(0) != '0'){
-	    index++;
-	    for (int i = 1; i<text.length()-1; i++){
-		if ((text.charAt(i+1) == '\n' && (text.charAt(i-1) == '\n'))
-		    && text.charAt(i) != '0' )
-		    index += 1;
-	    }
-	}
-	return index;
-    }
-  
-    private static String input(){
-	String input;
-	String returned = "";
+	StringBuilder input = new StringBuilder();
 	try {
 	    BufferedReader br = 
-		new BufferedReader(new InputStreamReader(System.in));		
+		new BufferedReader(new InputStreamReader(System.in));
 	    
-	    while((input=br.readLine())!=null){
-		returned += input + "\n";
+	    for (String x = br.readLine(); x != null; x = br.readLine()){
+		input.append(x + "\n");
 	    }
-	}
-	catch (IOException e) {
+	}catch (IOException e) {
 	    System.out.println("Error " + e.getMessage());
 	    e.printStackTrace();
 	}
-	return returned;
+
+	while (input.length() > 3){
+	    int index = Character.getNumericValue(input.charAt(0));
+	    input.delete(0,2);
+	    String[] values = input.substring(0,index*2 - 1).split(" ");
+	    input.delete(0, index*2);
+	    int j;
+	    for (j=0; j < index -1
+		     && Double.parseDouble(values[j]) < Double.parseDouble(values[j+1]); j++);
+	    System.out.println(!(j<index-1));
+	    
+	}
+
     }
 }
+    // public static void printString (StringBuilder c){
+    // 	for (int i = 0; i < c.length(); i++) {
+    // 	    System.out.print(c.charAt(i));
+    // 	}
+    // }
 
-    
+    // public static String toString(String [] cadena) {
+    // 	String rt = "";
+    // 	for (int i = 0; i < cadena.length; i++) {
+    // 	    rt += cadena[i].toString() + " ";
+    // 	}
+    // 	return rt;
+    // }
+
+	// String [] parsed = input.toString().split("\n");
+	// for (int i = 0; i < parsed.length-1; i+=2) {
+	//     String [] index = parsed[i+1].split(" ");
+	//     int j;
+	//     for (j=0; j < index.length-1
+	// 	     && Integer.parseInt(index[j]) < Integer.parseInt(index[j+1]); j++);
+	//     System.out.println(!(j<index.length-1));
