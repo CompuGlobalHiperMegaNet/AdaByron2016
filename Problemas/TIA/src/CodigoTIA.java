@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Tragraperras {
+public class CodigoTIA {
 
     public static void main(String[] args) {
 	int index;
@@ -23,6 +23,6 @@ public class Tragraperras {
 	    System.out.println("Error " + e.getMessage());
 	    e.printStackTrace();
 	}
-    }
+    }34
 }
 
