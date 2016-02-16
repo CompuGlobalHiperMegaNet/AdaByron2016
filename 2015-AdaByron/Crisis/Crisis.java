@@ -24,8 +24,10 @@ public class Crisis {
 	    int j;
 	    for (j=0; j < index -1
 		     && Double.parseDouble(values[j]) < Double.parseDouble(values[j+1]); j++);
-	    System.out.println(!(j<index-1));
-	    
+	    if (!(j<index-1))
+		System.out.println("SI");
+	    else
+		System.out.println("NO");
 	}
 
     }
