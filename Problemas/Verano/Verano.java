@@ -3,7 +3,6 @@ import java.io.*;
 public class Verano {
 
     public static void main(String[] args) {
-	int line = 0;
         Double menor;
 	boolean habemusMCD = false;
 	int MCD = 1;
@@ -33,8 +32,8 @@ public class Verano {
 		    n_mesas += Integer.parseInt(mesas[i])/MCD;
 		    
 		}
-		System.out.println(n_mesas);
-		line += 1;
+		if (n_mesas != 0)
+		    System.out.println(n_mesas);
 	    }
 	}catch (IOException e) {
 	    System.out.println("Error " + e.getMessage());
