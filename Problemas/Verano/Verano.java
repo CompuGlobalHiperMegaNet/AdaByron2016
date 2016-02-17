@@ -28,8 +28,12 @@ public class Verano {
 		    if (habemusMCD)
 			MCD = (int) (menor/i);
 		}
-		System.out.println(MCD);
-
+		int n_mesas = 0;
+		for (int i = 0; i < mesas.length-1; i++) {
+		    n_mesas += Integer.parseInt(mesas[i])/MCD;
+		    
+		}
+		System.out.println(n_mesas);
 		line += 1;
 	    }
 	}catch (IOException e) {
