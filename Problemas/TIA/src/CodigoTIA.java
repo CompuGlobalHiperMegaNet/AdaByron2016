@@ -14,7 +14,7 @@ public class CodigoTIA {
 		    index = Integer.parseInt(x);
 		}else{ //Estamos en entrada de datos
 		    String [] codes = x.split(" ");
-		    String word  = br.readLine();
+		    String [] words  = br.readLine().split("0");
 		    line+=1;
 		}
 		line += 1;
