@@ -34,7 +34,7 @@ public class Temperatura {
 	int [] set3 = new int [3];
 	int [] n = {0,0}; //[picos][valles]
 	if (datos.length < 3) return n;
-	for (int i = 0; i < datos.length-3; i++) {
+	for (int i = 0; i < datos.length-2; i++) {
 	    for (int j = 0; j < 3; j++) {
 		set3[j] = Integer.parseInt(datos[i+j]);
 	    }
