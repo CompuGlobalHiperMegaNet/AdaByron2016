@@ -8,6 +8,7 @@ public class Verano2 {
     }
     
     public static void main(String[] args) {
+	//long startTime = System.currentTimeMillis();
 	double menor;
 	int MCD = 1;
 	double acc;
@@ -34,6 +35,8 @@ public class Verano2 {
 	    System.out.println("Error " + e.getMessage());
 		e.printStackTrace();
 	}
+	//	long endTime = System.currentTimeMillis();
+	//	System.out.println("Tiempo : " + (endTime-startTime));
     }
 }
 
